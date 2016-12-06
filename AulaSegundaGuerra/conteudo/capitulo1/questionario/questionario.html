@@ -1,0 +1,242 @@
+<!DOCTYPE html>  
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../../DataCollector.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	 
+	<title>Questionário Cilindro</title>
+</head>
+<body onload="carregar('Q1-hard')">
+	<div style="display: inline-block;">
+
+		<!-- menu lateral que deve listar as questões -->
+		<div class="container" id="menu">
+			<h3>Exercício</h3>
+			<div>
+			  <a href="#" onclick="carregar('Q1-hard')" class="Q:1:H:1-1 list-group-item">Questão 1</a>
+			  <a href="#" onclick="carregar('Q2-hard')" class="Q:2:H:1-2 list-group-item">Questão 2</a>
+			  <a href="#" onclick="carregar('Q3-hard')" class="Q:3:H:1-3 list-group-item">Questão 3</a>			  			  
+			</div>
+		</div>
+
+		<div class="container" id="containerQuestion">
+
+		</div>
+
+	<div class="container" id="res">
+		<h3>Opções</h3>
+		<button type="button" id="btnTroca" class="finaliza btn btn-info btn-lg" data-toggle="modal" data-target="#resultadoModal">Finalizar</button>
+	</div>
+
+	</div>
+
+
+	<!-- A partir daqui fica escondido -->
+	<!-- Inicio da div de uma questão-->
+	<div class="question" id="Q1-hard">
+		<h1 class="Q:1:H:1-1">Questão 1</h1>
+
+		<p class="Q:1:H:1-1">(UNITAU) O fato concreto que desencadeou a Segunda Guerra Mundial foi:</p>
+		<img class="Q:1:H:1-1" src="images/questao_1.png" width="100" height="100">
+		<div class="alternativas">
+			<div class="radio">
+			      <label><input class="Q:1:H:1-1:A" type="radio" name="1" value="A">a) A saída dos invasores alemães do território dos Sudetos, na Checoslováquia</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:1:H:1-1:B" type="radio" name="1" value="B">b) A tomada do “Corredor Polonês” que desembocava na cidade-livre de Dantzig (atual Gdanki), pelos italianos</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:1:H:1-1:C" type="radio" name="1" value="C">c) A invasão da Polônia por tropas nazistas e a ação da Inglaterra e da França em socorro de sua aliada, declarando guerra ao Terceiro Reich</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:1:H:1-1:D" type="radio" name="1" value="D">d) A efetivação do “Anschluss”, que desmembrou a Áustria da Alemanha</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:1:H:1-1:E" type="radio" name="1" value="E">e) A invasão da Polônia por tropas alemãs, quebrando o Pacto Germano-Soviético</label>
+			    </div>	
+		</div>
+		<button type="button" id="A1-hard" class="Q:1:H:1-1 btn btn-info btn-lg" onclick="answer()">Responder</button>	
+	</div>
+	<!-- Fim da div de uma questão-->
+
+
+	<!-- Inicio da div de uma questão-->
+	<div class="question" id="Q2-hard">
+		<h1 class="Q:2:H:1-2">Questão 2</h1>
+
+		<p class="Q:2:H:1-2">(PUC- Campinas) Em relação às causas da Primeira Guerra Mundial é correto afirmar que:</p>
+		<img class="Q:2:H:1-2" src="images/questao_1.png" width="100" height="100">
+		<div class="alternativas">
+			<div class="radio">
+			      <label><input class="Q:2:H:1-2:A" type="radio" name="2" value="A">a) A incapacidade dos Estados liberais em solucionar a crise econômica do século XIX colocou em xeque toda a estrutura do sistema capitalista. A instabilidade política e social das nações europeias impulsionou as disputas colonialistas e o conflito entre as potências.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:2:H:1-2:B" type="radio" name="2" value="B">b) A desigualdade de desenvolvimento das nações capitalistas europeias acentuou a rivalidade imperialista. A disputa colonial marcada por um nacionalismo agressivo e pela corrida armamentista expandiu os pontos de atrito entre as potências.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:2:H:1-2:C" type="radio" name="2" value="C">c) O sucesso da política de apaziguamento e do sistema de aliança equilibrou o sistema de forças entre as nações europeias, acirrando as lutas de conquista das colônias da África e da Ásia.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:2:H:1-2:D" type="radio" name="2" value="D">d) O expansionismo na Áustria, a invasão da Polônia pelas tropas alemãs assustaram a Inglaterra e a França, que reagiram contra a agressão declarando guerra ao inimigo.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:2:H:1-2:E" type="radio" name="2" value="E">e) O desequilíbrio entre a produção e consumo incentivou a conquista de novos mercados produtores de matérias-primas e consumidores de bens de produção reativando as rivalidades entre os países europeus e os da América do Norte.</label>
+			    </div>	
+		</div>
+		<button type="button" id="A2-hard" class="Q:2:H:1-2 btn btn-info btn-lg" onclick="answer(answerlist)">Responder</button>
+	</div>
+	<!-- Fim da div de uma questão-->
+
+
+	<!-- Inicio da div de uma questão-->
+	<div class="question" id="Q3-hard">
+		<h1 class="Q:3:H:1-3">Questão 3</h1>
+
+		<p class="Q:3:H:1-3">(Cefet – SP) A chamada Crise de 1929 caracterizou-se por um colapso no sistema financeiro mundial no período do entreguerras, isto é, no intervalo entre a Primeira e a Segunda Guerra Mundial. </p>
+		<img class="Q:3:H:1-3" src="images/crash.jpg" width="100" height="100">
+		<p class="Q:3:H:1-3">Tal crise também é identificada com:</p>
+		<div class="alternativas">
+				<div class="radio">
+			      <label><input class="Q:3:H:1-3:A" type="radio" name="3" value="A">a) A Guerra Franco-Prussiana.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:3:H:1-3:B" type="radio" name="3" value="B">b) A quebra da Bolsa de Valores de São Paulo.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:3:H:1-3:C" type="radio" name="3" value="C">c) A Guerra Civil Americana.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:3:H:1-3:D" type="radio" name="3" value="D">d) A quebra da Bolsa de Valores de Nova York.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:3:H:1-3:E" type="radio" name="3" value="E">e) A Independência dos Estados Unidos.</label>
+			    </div>			
+		</div>
+		<button type="button" id="A3-hard" class="Q:3:H:1-3 btn btn-info btn-lg" onclick="answer(answerlist)">Responder</button>
+	</div>
+	<!-- Fim da div de uma questão-->
+
+	<div id="resultadoModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="D:1:H:1-1 close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Resultado</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>1. a</p>
+	       	<p>2. c</p>
+	       	<p>3. d</p>       		       		       		       	
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="D:1:H:1-1 btn btn-default " data-dismiss="modal">Fechar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+</body>
+<style type="text/css">
+	.question{
+		visibility: hidden;
+	}
+
+	.btn-default {
+		visibility: hidden;
+	}
+
+	.try-another {
+		visibility: hidden;
+	}
+	#res{
+		width: 200px;
+		float: right;
+		visibility: hidden;
+	}
+
+	#menu{
+		width: 200px;
+		float: left;
+	}
+
+	#containerQuestion{
+		width: 600px;
+		float: left;
+	}
+	
+	iframe {
+		width: 1100px;
+		height: 700px;
+	}
+
+</style>
+<script type="text/javascript">
+	var containerQuestion = document.getElementById("containerQuestion");
+	var containerTroca = document.getElementById("menuTroca");
+	var containerMenu = document.getElementById("menu");
+
+	containerQuestion.innerHTML = document.getElementById('Q1-hard').innerHTML;
+
+	function iniciar(idMenu,idquestion){
+		var menu = document.getElementById('menu');
+		menu.innerHTML = document.getElementById(idMenu).innerHTML;
+		containerQuestion.innerHTML = document.getElementById(idquestion).innerHTML;
+	}
+
+
+	function carregar(id) {
+		//question a ser carregada
+		var question = document.getElementById(id);
+		//setando container da question para a questão clicada na lista
+		containerQuestion.innerHTML = question.innerHTML;
+	}
+
+	function answer(){
+		console.log ("Aqui 1");
+		console.log (answerlist);
+		console.log(iterador);
+		flag = true;
+		for (i=iterador; i<6; i++){
+			if (answerlist[i] == "0") {
+				console.log("for 1");
+				i = i + 1;
+				carregar("Q"+ String(i) + "-hard");
+				flag = false;
+				return;				
+			}
+		}
+		console.log("for 2");
+		for (i=iterador-1; i>=0; i--){
+			if (answerlist[i] == "0") {
+				i = i + 1;
+				carregar("Q"+ String(i) + "-hard");
+				return;				
+			}
+		}
+		console.log("aqui caralho porra");
+		document.getElementById("res").style.visibility = 'visible';
+		//document.getElementById('resultado').style.visibility = 'visibile';
+	}
+</script>
+</html>
